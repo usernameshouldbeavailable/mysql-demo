@@ -25,3 +25,7 @@ SELECT * FROM mytable ORDER BY id DESC;
 -- select names in ascending alphbetical order 
 
 SELECT id, name FROM mytable ORDER BY name ASC;
+
+-- select names in descending alphabetical order
+
+SELECT id, name FROM mytable ORDER BY name DESC;
