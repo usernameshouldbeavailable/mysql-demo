@@ -45,3 +45,7 @@ SELECT AVG(numberrange) from mytable;
 -- select columns and rows with condition where IN
 
 SELECT name, phone, email, country FROM mytable WHERE country IN ('Germany','Italy','United Kingdom');
+
+-- select columns and rows with condition where NOT IN
+
+SELECT name, phone, email, country FROM mytable WHERE country NOT IN ('Germany','Italy','United Kingdom');
