@@ -41,3 +41,7 @@ SELECT MIN(numberrange) from mytable;
 -- select avg numerical value in a column
 
 SELECT AVG(numberrange) from mytable;
+
+-- select columns and rows with condition where IN
+
+SELECT name, phone, email, country FROM mytable WHERE country IN ('Germany','Italy','United Kingdom');
