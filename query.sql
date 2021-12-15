@@ -29,3 +29,15 @@ SELECT id, name FROM mytable ORDER BY name ASC;
 -- select names in descending alphabetical order
 
 SELECT id, name FROM mytable ORDER BY name DESC;
+
+-- select max numerical value in a column
+
+SELECT MAX(numberrange) from mytable;
+
+-- select min numerical value in a column
+
+SELECT MIN(numberrange) from mytable;
+
+-- select avg numerical value in a column
+
+SELECT AVG(numberrange) from mytable;
