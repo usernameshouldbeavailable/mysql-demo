@@ -49,3 +49,23 @@ SELECT name, phone, email, country FROM mytable WHERE country IN ('Germany','Ita
 -- select columns and rows with condition where NOT IN
 
 SELECT name, phone, email, country FROM mytable WHERE country NOT IN ('Germany','Italy','United Kingdom');
+
+-- select rows where name is Omar
+
+SELECT * FROM mytable WHERE name LIKE 'Omar%';
+
+-- find all people who are using icloud.org email
+
+SELECT * FROM mytable WHERE email LIKE '%@icloud.org';
+
+-- find all peole who are using .edu email address
+
+SELECT * FROM mytable WHERE email LIKE '%.edu';
+
+-- find all people who are using @hotmail email address
+
+SELECT * FROM mytable WHERE email LIKE '%@hotmail%';
+
+-- count all the people who are using @hotmail email address
+
+SELECT COUNT(*) FROM mytable WHERE email LIKE '%@hotmail%';
