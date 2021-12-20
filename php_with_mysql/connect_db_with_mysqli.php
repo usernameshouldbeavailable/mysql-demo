@@ -1,16 +1,15 @@
 <?php
-    function OpenCon()
+    function openConnection()
     {
-        $dbhost = "localhost";
-        $dbuser = "root";
-        $dbpass = "1234";
-        $db = "example";
-        $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or
-        die("Connect failed: %s\n". $conn -> error);
-        return $conn;
+        $databaseHost = "localhost";
+        $databaseUser = "root";
+        $databasePass = "";
+        $databaseName = "edunet";
+        $databaseConnection = new mysqli($databaseHost, $databaseUser, $databasePass, $databaseName) or die("Connect failed: %s\n". $databaseConnection -> error);
+        return $databaseConnection;
     }
-    function CloseCon($conn)
+    function closeConnection($databaseConnection)
     {
-        $conn -> close();
+        $databaseConnection->close();
     }
 ?>
