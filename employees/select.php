@@ -2,25 +2,21 @@
 
     include_once("db.php");
 
-    $selectQuery = "SELECT * FROM mytable ORDER BY id DESC";
+    $selectQuery = "SELECT id, name, phone, email, address, country, region FROM mytable ORDER BY id DESC";
 
     $resultQuery = mysqli_query($mysqli, $selectQuery);
 
 ?>
-<table>
+<table border="2px">
     <tr>
         <td>Name</td>
         <td>Phone</td>
         <td>Email</td>
         <td>Address</td>
-        <td>List</td>
         <td>Country</td>
         <td>Region</td>
-        <td>Postal Zip</td>
-        <td>Text</td>
-        <td>Number Range</td>
-        <td>Currency</td>
-        <td>Alphanumeric</td>
+        <td>Edit</td>
+        <td>Delete</td>
     </tr>
     <?php
     
@@ -32,14 +28,10 @@
             echo "<td>{$resultArray['phone']}</td>";
             echo "<td>{$resultArray['email']}</td>";
             echo "<td>{$resultArray['address']}</td>";
-            echo "<td>{$resultArray['list']}</td>";
             echo "<td>{$resultArray['country']}</td>";
             echo "<td>{$resultArray['region']}</td>";
-            echo "<td>{$resultArray['postalZip']}</td>";
-            echo "<td>{$resultArray['text']}</td>";
-            echo "<td>{$resultArray['numberrange']}</td>";
-            echo "<td>{$resultArray['currency']}</td>";
-            echo "<td>{$resultArray['alphanumeric']}</td>";
+            echo '<td><a href="edit.php?id=' . $resultArray['id'] . '">Edit</a></td>';
+            echo '<td><a href="#">Delete</a></td>';
             echo "</tr>";
 
 
